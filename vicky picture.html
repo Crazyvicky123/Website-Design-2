@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicky Pictures</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="vicky picture.css">
+    
+
+</head>
+<body>
+
+
+    <!--  starting of header for the vicky pictures website-->
+    <header class="header">
+        <a href="#" class="logo">Vicky Pictures</a>
+        <nav class="navbar">
+            <a href="#home">HOME</a>
+            <a href="#hdimages">HD IMAGE</a>
+            <a href="#marvelimages">MARVEL IMAGES</a>
+            <a href="#nature">NATURE</a>
+            <a href="#about">ABOUT</a>
+        </nav>
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <a href="#" class="fas fa-heart"></a>
+        </div>
+        <form action="" class="search-forms">
+            <input type="search" placeholder="search here.." name="" id="search-box">
+            <label for="search-box" class="fas fa-search"></label> 
+
+        </form>
+    </header>
+    <!-- ending of header for the vicky pictures website-->
+
+    <section class="home" id="home">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide" style="background:url(data:image/png;base64,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) no-repeat">
+                    <div class="content">
+                        
+                        <h3>Spider Man</h3>
+                        <a href="#" class="btn">Download now</a>
+                    </div>
+                </div>
+    
+                <div class="swiper-slide slide" style="background:url(2.jpg) no-repeat">
+                    <div class="content">
+                        <h3>Iron Man</h3>
+                        <a href="#" class="btn">Download now</a>
+                    </div>
+                </div>
+
+
+                <div class="swiper-slide slide" style="background:url(3.jpg) no-repeat">
+                    <div class="content">
+                        
+                        <h3>Hulk</h3>
+                        <a href="#" class="btn">Download now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        </div>
+    </section>
+
+
+
+    <!--start of home or middle section for the vicky picture website-->
+
+
+    <!--start of banner section for vicky pictures website-->
+    <section class="banner-container">
+    <div class="banner">
+        <image src="marvel.jpg" alt="marvel image"></image>
+        <div class="content">
+            
+            <span>New arrival</span>
+            <h3>free download</h3>
+            <a href="#" class="btn">Download now</a>
+        </div>
+    </div>
+
+    <div class="banner">
+        <image src="nature.jpg" alt="marvel image"></image>
+        <div class="content">
+            
+            <span>New arrival</span>
+            <h3>free download</h3>
+            <a href="#" class="btn">Download now</a>
+        </div>
+    </div>
+</section>
+
+     <!--end of banner section for vicky pictures website-->
+    
+
+
+     <!--image section start for vicky pictures website-->
+     <section class="products" id="products">
+         <h1 class="heading">Exclusive<span>Images</span></h1>
+         <div class="filter-button" style="display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         padding-bottom: 2.5rem;
+         gap:2rem;">
+           <div class="button active" data-filter="all">all</div>
+           <div class="button" data-filter="arrival">new arrival</div>
+           <div class="button" data-filter="hd images">hd images</div>
+           <div class="button" data-filter="marvel images">marvel images</div>
+         </div>
+
+         <div class="box-container">
+             <div class="box" data-item="hd images">
+                 <div class="iconss" >
+                     <a href="" class="fas fa-download"></a>
+                     <a href="" class="fas fa-heart"></a>
+                     <a href="" class="fas fa-eye"></a>
+                 </div>
+                 <div class="images">
+                     <img src="5.jpg" alt="hulk images" >
+                 </div>
+                 <div class="contents">
+                     <h3>hulk</h3>
+                     <a href="#" class="btn">Download now</a>
+                 </div>
+             </div>
+             <div class="box" data-item="new arrival">
+                <div class="iconss" >
+                    <a href="" class="fas fa-download"></a>
+                    <a href="" class="fas fa-heart"></a>
+                    <a href="" class="fas fa-eye"></a>
+                </div>
+                <div class="images">
+                    <img src="6.jpg" alt="batman images" >
+                </div>
+                <div class="contents">
+                    <h3>Batman</h3>
+                    <a href="#" class="btn">Download now</a>
+                </div>
+            </div>
+            <div class="box"data-item="hd images">
+                <div class="iconss">
+                    <a href="" class="fas fa-download"></a>
+                    <a href="" class="fas fa-heart"></a>
+                    <a href="" class="fas fa-eye"></a>
+                </div>
+                <div class="images">
+                    <img src="8.jpg" alt="batman iamges" >
+                </div>
+                <div class="contents">
+                    <h3>Batman logo</h3>
+                    <a href="#" class="btn">Download now</a>
+                </div>
+            </div>
+            <div class="box" data-item="new arrival">
+                <div class="iconss" >
+                    <a href="" class="fas fa-download"></a>
+                    <a href="" class="fas fa-heart"></a>
+                    <a href="" class="fas fa-eye"></a>
+                </div>
+                <div class="images">
+                    <img src="9.jpg" alt="batman iamges" >
+                </div>
+                <div class="contents">
+                    <h3>Avengers</h3>
+                    <a href="#" class="btn">Download now</a>
+                </div>
+            </div>
+            <div class="box" data-item="new arrival">
+                <div class="iconss" >
+                    <a href="" class="fas fa-download"></a>
+                    <a href="" class="fas fa-heart"></a>
+                    <a href="" class="fas fa-eye"></a>
+                </div>
+                <div class="images">
+                    <img src="11.jpg" alt="batman iamges" >
+                </div>
+                <div class="contents">
+                    <h3>HULk</h3>
+                    <a href="#" class="btn">Download now</a>
+                </div>
+            </div>
+            <div class="box" data-item="hd images">
+                <div class="iconss" >
+                    <a href="" class="fas fa-download"></a>
+                    <a href="" class="fas fa-heart"></a>
+                    <a href="" class="fas fa-eye"></a>
+                </div>
+                <div class="images">
+                    <img src="10.jpg" alt="batman iamges" >
+                </div>
+                <div class="contents">
+                    <h3>Batman</h3>
+                    <a href="#" class="btn">Download now</a>
+                </div>
+            </div>
+            <div class="box" data-item="marvel images">
+                <div class="iconss" >
+                    <a href="" class="fas fa-download"></a>
+                    <a href="" class="fas fa-heart"></a>
+                    <a href="" class="fas fa-eye"></a>
+                </div>
+                <div class="images">
+                    <img src="12.jpg" alt="batman iamges" >
+                </div>
+                <div class="contents">
+                    <h3>Justice League</h3>
+                    <a href="#" class="btn">Download now</a>
+                </div>
+            </div>
+            <div class="box" data-item="marvel images">
+                <div class="iconss" >
+                    <a href="" class="fas fa-download"></a>
+                    <a href="" class="fas fa-heart"></a>
+                    <a href="" class="fas fa-eye"></a>
+                </div>
+                <div class="images">
+                    <img src="13.jpg" alt="batman iamges" >
+                </div>
+                <div class="contents">
+                    <h3>Black Panther</h3>
+                    <a href="#" class="btn">Download now</a>
+                </div>
+            </div>
+            <div class="box" data-item="hd images">
+                <div class="iconss" >
+                    <a href="" class="fas fa-download"></a>
+                    <a href="" class="fas fa-heart"></a>
+                    <a href="" class="fas fa-eye"></a>
+                </div>
+                <div class="images" >
+                    <img src="14.jpg" alt="batman iamges"style="img:hover{transform: scale(1.1);}" >
+                </div>
+                <div class="contents">
+                    <h3>Maserati</h3>
+                    <a href="#" class="btn">Download now</a>
+                </div>
+            </div>
+         </div>
+     </section>
+
+      <!--image section start for vicky pictures website-->
+      <!--deal section starts for vicky pictures website-->
+      <section class="deal">
+          <div class="images">
+              <img src="15.jpg" alt="">
+          </div>
+          <div class="contentss">
+              <span>New Images</span>
+              <h3>Hd images & Wallpaper</h3>
+              <p>download free</p>
+              <a href="#" class="btn">Download now</a>
+          </div>
+      </section>
+      <!--deal section end for vicky pictures website-->
+<!--start of marvel images section-->
+<section class="featured" id="featured">
+
+    <h1 class="heading"> <span>Both Mobile & Desktop</span> Wallpaper </h1>
+    <h2 class="heading"> <span>Joker</span> Images </h2>
+
+    <div class="swiper featured-slider">
+        
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide">
+                <div class="icons">
+                   
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-download"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="16.jpg" alt="">
+                </div>
+               
+            </div>
+            <div class="swiper-slide slide">
+                <div class="icons">
+                   
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-download"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="23.jpg" alt="">
+                </div>
+            
+            </div>
+            <div class="swiper-slide slide">
+                <div class="icons">
+                   
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-download"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="18.jpg" alt="">
+                </div>
+            
+            </div>
+            <div class="swiper-slide slide">
+                <div class="icons">
+                   
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-download"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="19.jpg" alt="">
+                </div>
+            
+            </div>
+            <div class="swiper-slide slide">
+                <div class="icons">
+                   
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-download"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="20.jpg" alt="">
+                </div>
+            
+            </div>
+            <div class="swiper-slide slide">
+                <div class="icons">
+                   
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-download"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="24.jpg" alt="" >
+                </div>
+            
+            </div>
+            
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div></section>
+
+<!--end for marvel images section-->
+<!--review section for vicky website starts-->
+
+<section class="review" id="review">
+    <h1 class="heading">User's<span>review</span></h1>
+    <div class="swiper review-slide">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide">
+                <p>This website is best for downloading the desktop wallpaper and Mobile wallpaper 
+                    and the website is user friendly website and if you can request any hd images they will 
+                compulsory they will upload as soon as possible </p>
+                <div class="users">
+                    <img src="pic-1.png" alt="">
+                    <div class="info">
+                        <h3>rocky</h3>
+                        <span>happy users</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <p>This website is best for downloading the desktop wallpaper and Mobile wallpaper 
+                    and the website is user friendly website and if you can request any hd images they will 
+                compulsory they will upload as soon as possible </p>
+                <div class="users">
+                    <img src="pic-2.png" alt="">
+                    <div class="info">
+                        <h3>julie</h3>
+                        <span>happy users</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <p>This website is best for downloading the desktop wallpaper and Mobile wallpaper 
+                    and the website is user friendly website and if you can request any hd images they will 
+                compulsory they will upload as soon as possible </p>
+                <div class="users">
+                    <img src="pic-3.png" alt="" style="height: 7rem;
+                    width: 7rem;
+                    object-fit: cover;
+                    border-radius: 50%;">
+                    <div class="info">
+                        <h3>rizwan</h3>
+                        <span>happy users</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <p>This website is best for downloading the desktop wallpaper and Mobile wallpaper 
+                    and the website is user friendly website and if you can request any hd images they will 
+                compulsory they will upload as soon as possible </p>
+                <div class="users">
+                    <img src="pic-4.png" alt="">
+                    <div class="info">
+                        <h3>kallirani</h3>
+                        <span>happy users</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--review section for vicky website Ends-->
+
+
+<!--start of contact section-->
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span>contact</span> us </h1>
+
+    <div class="icons-container">
+
+        <div class="icons">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>address</h3>
+            <p>944b pasumponnagar cheyyar</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-envelope"></i>
+            <h3>email</h3>
+            <p>vickypictures@gamil.com</p>
+            <p>vbros@gmail.com</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-phone"></i>
+            <h3>phone</h3>
+            <p>6374593439</p>
+            <p>6883638907</p>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <form action="">
+            <h3>get in touch</h3>
+            <div class="inputBox">
+                <input type="text" placeholder="your name">
+                <input type="email" placeholder="your email">
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="your number">
+                <input type="text" placeholder="your subject">
+            </div>
+            <textarea placeholder="your message" cols="30" rows="10"></textarea>
+            <input type="submit" value="send message" class="btn">
+        </form>
+
+    </div>
+    </section>
+<!--end of contact section-->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, nesciunt!</p>
+        </div>
+
+        <div class="box">
+            <h3>category</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> men </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> women </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> kids </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> best seller </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> new arrivals </a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> products </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> featured </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> review </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> contact </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> blogs </a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> my order </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> my account </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> my listing </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> sell now </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> new offers </a>
+        </div>
+
+    </div>
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-instagram"></a>
+    </div>
+
+    <div class="credit"> copyright @ 2021 by <span>vicky pictures</span> </div>
+    
+</section>
+
+
+
+
+        <!--start of home or middle section for the vicky picture website-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="vicky picture.js"></script>
+
+
+</body>
+
+</html>
